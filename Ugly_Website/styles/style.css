@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+body {
+  background: linear-gradient(90deg, cornsilk, rgb(154, 219, 219));
+  cursor: url("/assets/img/cursor.png"), auto; /* not working */
+  color: teal;
+  margin: 0em;
+}
+h1 {
+  padding: 0.3em;
+  margin: 0em;
+  color: rgb(10, 58, 58);
+  text-decoration: rgb(10, 58, 58) wavy underline;
+  font-family: "Poppins";
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+h4 {
+  font-size: 1em;
+  padding: 0em 2em 1em 2em;
+  margin: 0em;
+  color: cornsilk;
+}
+p {
+  font-size: medium;
+  font-size: 1.3em;
+  text-decoration: rgb(2, 31, 31) wavy underline;
+}
+li {
+  list-style-type: square;
+}
+#bodytext {
+  margin: 3em;
+}
+.headerinfo {
+  background-color: teal;
+  box-shadow: 0em 0.2em 0.5em rgb(0, 83, 83);
+  margin: 0em;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.leadingtext {
+  display: flex;
+  justify-content: center;
+  margin: 0em;
+}
+.leadingtext h4 {
+  transition: color 0.3s ease-in;
+  font-style: italic;
+  display: block;
+  margin-top: 1px;
+}
+.leadingtext h4:hover {
+  color: rgb(139, 136, 124);
+}
+.imggrid {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  vertical-align: bottom;
+}
+.imgtext {
+  display: block;
+  width: 30vw;
+  height: 30vw;
+  margin: 10px;
+  background-color: tomato;
+}
+.imggrid img {
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.imggrid img:hover {
+  transform: translate3d(-10px, -10px, 0px);
+}
+.imggrid h4 {
+  font-size: 2em;
+  font-weight: 200;
+  color: cornsilk;
+  text-align: left;
+  vertical-align: middle; /* not working */
+  transition: opacity 0.3s ease-in-out;
+}
+.imggrid h4:hover {
+  opacity: 85%;
+}
+.animationbox {
+  width: 4em;
+  height: 5em;
+  background: tomato;
+  position: relative;
+  animation: repeatit 4s linear 0s infinite alternate;
+}
+@keyframes repeatit {
+  from {
+    left: 0;
+  }
+  to {
+    left: 90%;
+  }
+}
