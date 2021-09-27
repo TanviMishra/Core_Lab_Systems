@@ -1,0 +1,181 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: "Inter";
+  margin: 0em;
+}
+a {
+  text-decoration: none;
+  color: none;
+}
+h1 {
+  font-size: 4em;
+}
+h6 {
+  font-size: 1.2em;
+  margin: 0em;
+  padding: 0em 1em 0em 1em;
+}
+#black {
+  background-color: black;
+  padding: 0.05em;
+}
+.header {
+  display: flex;
+  height: 2.95vh;
+  box-shadow: 0px 2px 5px #9e9e9e;
+  padding: 1em 5em 1em 5em;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.headerinfo {
+  display: inline-block;
+}
+#headerformat {
+  height: 2.95vh;
+  box-shadow: 0px 2px 5px #9e9e9e;
+  padding: 1em 5em 1em 5em;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.navBar {
+  display: flex;
+  margin: 0em;
+  padding: 0em;
+}
+#home {
+  color: deeppink;
+  text-decoration: underline;
+}
+#navlink {
+  color: grey;
+}
+.mainbody {
+  display: flex;
+  height: 95vh;
+  z-index: 0;
+}
+.left {
+  background-color: white;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  background-color: rgb(87, 87, 87);
+  color: white;
+  width: 50vw;
+  display: flex;
+}
+.right div {
+  margin: 7em;
+  width: 30vw;
+}
+.right p {
+  font-size: 1.5em;
+  display: inline;
+}
+.right h2 {
+  font-size: 3em;
+}
+#purpleText {
+  color: rgb(179, 148, 211);
+}
+.cardbody {
+  padding: 1.5em 13em 1.5em 13em;
+}
+.overlapbody {
+  padding: 10em 13em 1.5em 13em;
+}
+.deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: max-content;
+  column-gap: 3em;
+  row-gap: 3em;
+  place-items: start;
+}
+.cardbody h1 {
+  padding: 0em;
+  margin: 0em;
+  margin-bottom: 1em;
+}
+.card {
+  border-radius: 25px;
+  padding: 1.5em;
+  height: 17em;
+  width: 17em;
+  position: relative;
+  justify-content: center;
+  background-color: white;
+  border: 0.1em solid black;
+  box-shadow: 0px 2px 5px #9e9e9e;
+}
+.card h2 {
+  font-size: 1.7em;
+  font-weight: bolder;
+  text-shadow: 0px 2px 2px #9e9e9e;
+}
+.card p {
+  font-size: 1.4em;
+  margin-top: 3em;
+  max-width: 10em;
+}
+#card2 {
+  background-color: black;
+  color: white;
+  text-shadow: none;
+}
+#card3 h2 {
+  background-color: LightPink;
+  padding: 0.5em 1.5em;
+  box-shadow: 0px 4px 4px #afafaf;
+}
+#card4 {
+  border: 0.1em solid blue;
+}
+#card4 h2 {
+  color: deeppink;
+}
+#overlap {
+  position: absolute;
+  left: 45em;
+  top: 35em;
+  transform: rotate(-30deg);
+}
+#greybox {
+  border-radius: 25px;
+  width: 13em;
+  height: 10em;
+  background-color: rgb(201, 201, 201);
+  position: absolute;
+  top: 0em;
+  left: 5em;
+}
+.indexpage {
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.option {
+  margin: 1.2em;
+  padding: 0.9em;
+  font-size: 1.5em;
+  border-radius: 5px;
+  color: black;
+  text-decoration-line: none;
+  background-color: lightpink;
+}
+.option:hover {
+  opacity: 40%;
+}
+#blob:hover{
+  opacity: 0%;
+}
+#geo{
+  opacity: 0%;
+}
