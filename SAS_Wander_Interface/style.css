@@ -1,0 +1,25 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2e8cf;
+  font-family: "Arial Black";
+}
+h1 {
+  margin-top: 15px;
+  padding: 0px;
+  font-size: 40px;
+  color: #082110;
+  display: flex;
+  justify-content: center;
+}
+p {
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 15px;
+  color: #082110;
+}
+canvas {
+  display: block;
+  margin-left: 20px;
+}
