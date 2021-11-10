@@ -1,0 +1,245 @@
+:root {
+  --blue: #25316d;
+  --dark-blue: #12193a;
+  --dark-blue-hover: #12193a77;
+  --dark-green: #348455;
+  --light-green: #48a870;
+  --brown: #2d1d0f;
+  --dark-red: #931a1d;
+  --light-red: #bc2026;
+  --dark-orange: #c85123;
+  --light-orange: #f26722;
+  --cream: #ffeed0;
+  --navheight: 30px;
+}
+html,
+body {
+  height: 100%;
+} /*make child div span the whole body div*/
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: filmotype-maxwell, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--cream);
+  color: var(--blue);
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2 {
+  margin: 0px;
+  font-family: filmotype-maxwell, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+p {
+  margin: 0px;
+  font-family: poppins, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+a {
+  margin: 0px;
+  font-family: poppins, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--light-orange);
+}
+
+#navigation {
+  padding: 30px;
+  margin: 0px;
+  height: var(--navheight);
+  width: 100vw;
+  background-color: var(--brown);
+  color: var(--light-orange);
+  font-size: 15px;
+  display: flex;
+  position: fixed;
+}
+#nav1:hover {
+  opacity: 50%;
+}
+#nav2 {
+  margin: auto;
+  text-align: center;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--brown);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.sidenav a {
+  padding: 20px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--cream);
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  opacity: 50%;
+}
+
+#home {
+  height: 100%;
+  background-color: var(--cream);
+  transition: margin-left 0.5s;
+  padding: 50px;
+}
+#donations {
+  background-color: var(--blue);
+  transition: margin-left 0.5s;
+  padding: 150px;
+  color: var(--dark-green);
+}
+#donations h2 {
+  color: var(--cream);
+  font-size: 40px;
+}
+#donations p {
+  color: var(--cream);
+  font-size: 15px;
+  max-width: 70vw;
+  margin: 15px auto 10px auto;
+}
+#headboard img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  height: 50vh;
+  object-fit: cover;
+}
+#headboard #title {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 35px;
+}
+#headboard #anchorlinks {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 70vw;
+  margin: 15px auto 10px auto;
+}
+#anchorlinks a {
+  margin: 0;
+}
+#anchorlinks a:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+.section {
+  max-width: 70vw;
+  margin: 40px auto 0px auto;
+  justify-content: center;
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+}
+.logoWrap img {
+  width: 11vw;
+  height: 11vw;
+  object-fit: cover;
+}
+.logoWrap img:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+.logoWrap img:hover + .logoText {
+  opacity: 100%;
+}
+.logoText {
+  margin: 30px 3px 0px 3px;
+  padding: 3px;
+  background-color: var(--dark-blue-hover);
+  transition: all 0.4s ease-in;
+  opacity: 0%;
+}
+.logoWrap h1 {
+  font-size: 20px;
+  font-family: poppins, sans-serif;
+  color: var(--cream);
+}
+.logoText p {
+  color: var(--cream);
+}
+#BJP {
+  color: var(--dark-orange);
+}
+#CPI-M {
+  color: var(--dark-red);
+}
+#CPI {
+  color: var(--dark-green);
+}
+#INC {
+  color: var(--blue);
+}
+#NCP {
+  color: var(--cream);
+}
+
+.donationMap {
+  width: 70vw;
+}
+#map {
+  width: 70vw;
+  height: fit-content;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+#rightside {
+  width: 30vw;
+  text-align: right;
+  font-size: 18px;
+  margin-top: 0px;
+}
+#leftside {
+  width: 30vw;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 0px;
+}
+#middle {
+  width: 70vw;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 0px;
+}
+#empty {
+  width: 30vw;
+  height: 30vh;
+  background-color: var(--dark-green);
+  margin: 0px auto 0px auto;
+}
+#about {
+  height: 100%;
+  background-color: var(--cream);
+  transition: margin-left 0.5s;
+  padding: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
