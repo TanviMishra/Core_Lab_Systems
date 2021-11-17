@@ -90,7 +90,7 @@ var projection = d3.geoMercator()
 
 async function loadData(){
   let json=await d3.json("https://raw.githubusercontent.com/Subhash9325/GeoJson-Data-of-Indian-States/master/Indian_States");
-  let csv=await d3.csv("assets/data/Donations_1-3000.csv");
+  let csv=await d3.csv("https://raw.githubusercontent.com/TanviMishra/Core_Lab_Systems/main/CAS_Prototype_3/assets/data/Donations_1-3000.csv");
   ready(json,csv);
 }
 function ready(dataGeo, data) {
