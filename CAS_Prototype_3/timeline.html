@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CAS PROTOTYPE</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" media="screen" />
+    <link rel="stylesheet" href="https://use.typekit.net/cso3jci.css"> <!--filmotype (?) font-->
+    <link rel="stylesheet" href="https://use.typekit.net/cso3jci.css"> <!--poppins (?) font-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!--for the scrolling effect-->
+</head>
+    
+<body>
+    <div id="navigationCondense">
+        <img id="nav1" class="dropShadowBlue" style="cursor:pointer" onclick="openNav()" src="./assets/img/home.png" alt="homepage icon">
+    </div>
+
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10006;</a>
+        <a href="index.html">Political Funding</a>
+        <a href="timeline.html">Donations</a>
+        <a href="resources.html">Resources</a>
+    </div>
+
+    <div id="coverImg" class="donations-cover">
+        <img id= "donations_coin" src="./assets/img/donation_coin.png" alt="donations overflowing the page from all angles">
+        <img id= "donations_text" src="./assets/img/donation_text.png" alt="donations overflowing the page from all angles">
+        <img id= "donations_cash" src="./assets/img/donation_cash.png" alt="donations overflowing the page from all angles">
+
+    </div>
+
+    <div id="donations">
+        <div class="fullHeight">
+            <div class="verticalCenter">
+                <div id="headboard">
+                    <h2 id="title" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">Donations</h2>
+                    <div id="anchorlinks" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">
+                        <a href="#Section1">'Key' Players</a>
+                        <a href="#Section2">Donation Map</a>
+                        <a href="#Section3">Timeline</a>
+                    </div>
+                    <h3 data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">The current law mandates political parties to declare the identity of all who donate more than Rs 20,000. Mapping that dataset reveals interesting facts about the demographic and timeline of donations across the country.</h3>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="fullHeight">
+            <div class="verticalCenter">
+                <div class="section" id="Section1">
+                <p id="sec">Section 1</p>
+                    <h2 data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">'Key' Players</h2>
+                    <h3 data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">The seven national parties are the BJP, Congress, Bahujan Samaj Party (BSP), Nationalist Congress Party (NCP), Trinanmool Congress, Communist Party of India (CPI) and Communist Party of India (Marxist). Data on BSP and Trinanmool Congress is not available.</h3>
+                    <div class="wrapper" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">
+                        <div class="logoWrap">
+                            <h1>BJP</h1>
+                            <img src="./assets/img/BJP.png" alt="BJP Stylised Logo" onclick="showDesc(0)">
+                            <div class="logoText" id="BJP">
+                                <p>The Bharatiya Janata Party, a right-wing party, is one of two major political parties in India. It has been the ruling political party of the Republic of India since 2014.</p>
+                            </div>
+                        </div>
+                        <div class="logoWrap">
+                            <h1>INC</h1>
+                            <img src="./assets/img/INC.png" alt="INC Stylised Logo" onclick="showDesc(1)">
+                            <div class="logoText" id="INC">
+                                <p>The Indian National Congress is one of two major political parties in India. It was the first modern nationalist movement to emerge in the British Empire in Asia and Africa.</p>
+                            </div>
+                        </div>
+                        <div class="logoWrap">
+                            <h1>CPI M</h1>
+                            <img src="./assets/img/CPI-M.png" alt="CPI M Stylised Logo" onclick="showDesc(2)">
+                            <div class="logoText" id="CPI-M">
+                                <p>The Communist Party of India (Marxist) is a communist national parties of India. The party emerged from a split from the Communist Party of India in 1964.</p>
+                            </div>
+                        </div>
+                        <div class="logoWrap">
+                            <h1>CPI</h1>
+                            <img src="./assets/img/CPI.png" alt="CPI Stylised Logo" onclick="showDesc(3)">
+                            <div class="logoText" id="CPI">
+                                <p>The Communist Party of India is the oldest communist party in India and one of the eight national parties in the country. The CPI was founded in Kanpur on 26 December 1925.</p>
+                            </div>
+                        </div>
+                        <div class="logoWrap">
+                            <h1>NCP</h1>
+                            <img src="./assets/img/NCP.png" alt="NCP Stylised Logo" onclick="showDesc(4)">
+                            <div class="logoText" id="NCP">
+                                <p>The Nationalist Congress Party is one of the eight national parties in India. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="Section2" style="display: none;">
+            <div class="extraHeight">
+                <div class="verticalCenter">
+                    <p id="sec">Section 2</p>
+                    <h2 data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">Donation Map</h2>
+                    <!-- Create an element where the map will take place -->
+                    <svg id="my_dataviz" width="608" height="650" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine"></svg>
+                    <input type="checkbox" class="checkbox" value="BJP" checked><label>group BJP</label>
+                    <input type="checkbox" class="checkbox" value="INC" checked><label>group INC</label>
+                    <input type="checkbox" class="checkbox" value="CPI-M" checked><label>group CPI</label>
+                </div>
+            </div>      
+        </div>
+        <div class="extraHeight" style="margin-top: 300px;">
+            <div class="verticalCenter">
+                <div class="section" id="Section3">
+                    <p id="sec">Section 3</p>
+                    <div class="donationWrap">
+                        <div class="donationWrapLeft">
+                            <div class="donationMap">
+                                <!-- Create an element where the map will take place -->
+                                <svg id="my_dataviz_2" width="608" height="650"></svg>
+                            </div>
+                        </div>
+                        <div class="donationWrapRight">
+                            <div class="timelineContent">
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 style="text-align: left;"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">Timeline</h2>
+                                        <p style="text-align: left;"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">Scroll to see how donations have changed over the years</p>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 id="leftside" class="dates" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">2003</h2>
+                                        <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">It is no surprise that it took more than a decade-long struggle by election watchdogs, activists, lawyers and public-spirited individuals to get ‘The Election and Other Related Bill’ (dealing with key issues of state funding of elections, tax rebate to political donors, etc) passed in 2003.</p>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                         <h2 id="leftside" class="dates" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">2004</h2>
+                                          <p id="leftside" class="electionYear" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">Election Winner: INC</p>
+                                          <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">In the 2004 general vote, India’s top six national parties officially spent about 2.69 billion rupees, as per their declarations to the ECI.</p>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 id="leftside" class="dates" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">2009</h2>
+                                        <p id="leftside" class="electionYear" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">Election Winner: INC</p>
+                                        <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine"></p>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 id="leftside" class="dates" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">2011</h2>
+                                        <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">In a survey she conducted between 2011 and 2014 among 2,500 incumbent politicians in Bihar, Jharkhand and Uttar Pradesh, Jennifer Bussell, assistant professor of political science and public policy at the University of California, Berkeley, found that individual donors accounted for the highest share in the total funds received by the candidates- 32 per cent for Lok Sabha MPs and 29 per cent for MLAs.</p>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 id="leftside" class="dates" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">2012</h2>
+                                        <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">between 2012 and 2016, corporate contributions formed a staggering 89 per cent of the total funds.</p>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 id="leftside" class="dates" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">2014</h2>
+                                        <p id="leftside" class="electionYear" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">Election Winner: BJP</p>
+                                        <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">In the 2014 election that swept Modi to power, India’s top six national parties' declared spending had jumped nearly five-fold from 2004 to 13.09 billion rupees.</p>
+                                        <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">In the 2014 campaign, the BJP declared spending of 7.12 billion rupees, over 40 percent more than Congress.</p>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 id="leftside" class="dates" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">2017</h2>
+                                        <p id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine">India’s campaign finance overhaul began in 2017, when parliament approved an amendment that made it easier for companies to donate to campaigns, including removing a cap on corporate donations (the maximum used to be 7.5 percent of a company’s average net profits over three years).</p>
+                                        <ol>
+                                            <li id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine"> Political parties can now receive foreign funds </li>
+                                            <li id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine"> Any company can donate any amount of money to any political party</li>
+                                            <li id="leftside" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="ease-in-sine"> Any individual, group of people or company can donate money anonymously to any party through electoral bonds</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="fullHeight">
+                                    <div class="verticalCenter">
+                                        <h2 id="leftside" class="dates" data-aos="fade-up">2019</h2>
+                                        <p id="leftside" class="electionYear" data-aos="fade-up">Election Winner: BJP</p>
+                                        <p id="leftside" data-aos="fade-up">Modi’s Bharatiya Janata Party earned the highest income among rivals in FY 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            
+        });
+    </script>
+</body>
+<!-- Loading d3.js -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script src="./scripts/main.js"></script>
+</html> 
