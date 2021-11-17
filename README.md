@@ -11,4 +11,4 @@ b. https://tanvimishra.github.io/Core_Lab_Systems/SAS_Draft2/index.html </br>
 5. CAS:</br>
 Prototype 1: https://tanvimishra.github.io/Core_Lab_Systems/CAS_Prototype/index.html </br>
 Prototype 2: https://tanvimishra.github.io/Core_Lab_Systems/CAS_Prototype_2/index.html </br>
-Prototype 2: https://tanvimishra.github.io/Core_Lab_Systems/CAS_Prototype_3/index.html </br>
+Prototype 2: https://tanvimishra.github.io/CCore_Lab_Systems/CAS_Prototype_3/index.html </br>
